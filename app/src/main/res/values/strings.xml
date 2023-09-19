@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">nasa_app</string>
+    <string name="app_name">NASA</string>
+    <string name="astronomy_picture_of_the_day">Astronomy Picture of the Day</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save_to_gallery">Save to gallery</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="saving_failed">Saving failed</string>
+    <string name="saved">Saved</string>
 </resources>
