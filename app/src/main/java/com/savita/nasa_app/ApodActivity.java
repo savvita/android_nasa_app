@@ -76,12 +76,12 @@ public class ApodActivity extends AppCompatActivity {
         Log.d(TAG, "saveToGallery: " + file.toString());
         String url = item.getHdurl() != null ? item.getHdurl() : item.getUrl();
 
-        Loader.downloadImage(
+        new Thread(() -> Loader.downloadImage(
                 url,
                 file,
                 this::showSuccess,
                 this::showFail
-        );
+        )).start();
 
     }
     private void showSuccess(Void arg) {

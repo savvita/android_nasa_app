@@ -41,9 +41,10 @@ public class ApodController {
                         apods.add(Apod.deserialize(jsonArr.getJSONObject(i)));
                     }
 
-                    this.items.clear();
+//                    this.items.clear();
+                    Collections.reverse(apods);
                     this.items.addAll(apods);
-                    Collections.reverse(this.items);
+//                    Collections.reverse(this.items);
                 } catch (Exception ex) {
                     Log.d(TAG, "get: ", ex);
                 }
