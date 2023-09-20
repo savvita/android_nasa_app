@@ -19,6 +19,7 @@ import com.savita.nasa_app.configs.NasaApiConfig;
 import com.savita.nasa_app.models.Neo;
 import com.savita.nasa_app.net.ApodController;
 import com.savita.nasa_app.net.NeoController;
+import com.savita.nasa_app.net.NewsController;
 import com.savita.nasa_app.sample_data.ApodSample;
 import com.savita.nasa_app.sample_data.NeoSample;
 

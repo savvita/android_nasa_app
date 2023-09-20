@@ -1,14 +1,14 @@
 package com.savita.nasa_app;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.savita.nasa_app.adapters.NeoDetailsAdapter;
 import com.savita.nasa_app.configs.NasaApiConfig;
@@ -16,7 +16,6 @@ import com.savita.nasa_app.configs.NeoConfig;
 import com.savita.nasa_app.models.CloseApproachData;
 import com.savita.nasa_app.net.NeoController;
 import com.savita.nasa_app.sample_data.NeoDetailsSample;
-import com.savita.nasa_app.sample_data.NeoSample;
 
 import java.util.ArrayList;
 import java.util.List;

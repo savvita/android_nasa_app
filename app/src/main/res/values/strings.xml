@@ -21,4 +21,6 @@
     <string name="meters">meters</string>
     <string name="km_s">km/s</string>
     <string name="a_u">a.u.</string>
+    <string name="news">News</string>
+    <string name="open_in_browser">Open in browser</string>
 </resources>
