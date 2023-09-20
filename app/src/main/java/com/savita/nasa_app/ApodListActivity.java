@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -132,7 +133,7 @@ public class ApodListActivity extends AppCompatActivity {
             items.addAll(newApods);
 
             previewRecyclerView.post(() -> apodAdapter.notifyDataSetChanged());
-            if(loadingLastImage && items.size() > 0) {
+            if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT && loadingLastImage && items.size() > 0) {
                 new Thread(() -> Loader.loadImageInto(items.get(0).getUrl(), lastImage)).start();
                 lastImage.post(() -> lastImage.setVisibility(View.VISIBLE));
                 loadingLastImage = false;

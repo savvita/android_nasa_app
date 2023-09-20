@@ -17,6 +17,7 @@ import com.savita.nasa_app.adapters.NeoAdapter;
 import com.savita.nasa_app.configs.AppConfig;
 import com.savita.nasa_app.configs.NasaApiConfig;
 import com.savita.nasa_app.models.Neo;
+import com.savita.nasa_app.net.ApiController;
 import com.savita.nasa_app.net.ApodController;
 import com.savita.nasa_app.net.NeoController;
 import com.savita.nasa_app.net.NewsController;
@@ -69,6 +70,7 @@ public class NeoListActivity extends AppCompatActivity {
 
         //TODO change this
         controller = new NeoController(new NeoSample(getFilesDir()), NasaApiConfig.BASE_URL + NasaApiConfig.NEO_PATH);
+//        controller = new NeoController(new ApiController(), NasaApiConfig.BASE_URL + NasaApiConfig.NEO_PATH);
 
         isHazardousOnly = findViewById(R.id.hazardous_only_switch);
         isHazardousOnly.setOnCheckedChangeListener((btn, checked) -> filter(checked));

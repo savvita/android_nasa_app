@@ -8,195 +8,211 @@
     android:padding="@dimen/paddingStart"
     tools:context=".NeoFragment">
 
-    <TextView
-        android:id="@+id/neo_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeTitle"
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/estimated_diameter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/estimated_diameter"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/neo_name" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="end"
-        app:constraint_referenced_ids="max_diameter,min_diameter" />
+            <TextView
+                android:id="@+id/neo_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/max_diameter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/max"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/estimated_diameter" />
+            <TextView
+                android:id="@+id/estimated_diameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/estimated_diameter"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/neo_name" />
 
-    <TextView
-        android:id="@+id/min_diameter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/min"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/max_diameter" />
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrier2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="max_diameter,min_diameter" />
 
-    <TextView
-        android:id="@+id/neo_min_diameter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Min diameter"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        app:layout_constraintBaseline_toBaselineOf="@+id/min_diameter"
-        app:layout_constraintStart_toEndOf="@id/barrier2" />
+            <TextView
+                android:id="@+id/max_diameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/max"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/estimated_diameter" />
 
-    <TextView
-        android:id="@+id/neo_max_diameter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Max diameter"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        app:layout_constraintBaseline_toBaselineOf="@+id/max_diameter"
-        app:layout_constraintStart_toEndOf="@id/barrier2" />
+            <TextView
+                android:id="@+id/min_diameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/min"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/max_diameter" />
 
-    <TextView
-        android:id="@+id/close_approach_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/close_approach_date_v2"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/min_diameter" />
+            <TextView
+                android:id="@+id/neo_min_diameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Min diameter"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintBaseline_toBaselineOf="@+id/min_diameter"
+                app:layout_constraintStart_toEndOf="@id/barrier2" />
 
-    <TextView
-        android:id="@+id/neo_close_approach_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Close approach date"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/close_approach_date" />
+            <TextView
+                android:id="@+id/neo_max_diameter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Max diameter"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintBaseline_toBaselineOf="@+id/max_diameter"
+                app:layout_constraintStart_toEndOf="@id/barrier2" />
 
-    <Button
-        android:id="@+id/see_all_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border_button"
-        android:text="@string/see_all"
-        android:textColor="@color/foreground"
-        app:layout_constraintBottom_toBottomOf="@+id/neo_close_approach_date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/close_approach_date"/>
+            <TextView
+                android:id="@+id/close_approach_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/close_approach_date_v2"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/min_diameter" />
 
-    <TextView
-        android:id="@+id/relative_velocity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/relative_velocity"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/neo_close_approach_date" />
+            <TextView
+                android:id="@+id/neo_close_approach_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Close approach date"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/close_approach_date" />
 
-    <TextView
-        android:id="@+id/neo_velocity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Velocity"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/relative_velocity" />
+            <Button
+                android:id="@+id/see_all_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_button"
+                android:text="@string/see_all"
+                android:textColor="@color/foreground"
+                app:layout_constraintBottom_toBottomOf="@+id/neo_close_approach_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/close_approach_date" />
 
-    <TextView
-        android:id="@+id/miss_distance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/miss_distance"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/neo_velocity" />
+            <TextView
+                android:id="@+id/relative_velocity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/relative_velocity"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/neo_close_approach_date" />
 
-    <TextView
-        android:id="@+id/neo_miss_distance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Miss distance"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/miss_distance" />
+            <TextView
+                android:id="@+id/neo_velocity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Velocity"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/relative_velocity" />
 
-    <TextView
-        android:id="@+id/orbiting_body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/orbiting_body"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/neo_miss_distance" />
+            <TextView
+                android:id="@+id/miss_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/miss_distance"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/neo_velocity" />
 
-    <TextView
-        android:id="@+id/neo_orbiting_body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Orbiting body"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/orbiting_body" />
+            <TextView
+                android:id="@+id/neo_miss_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Miss distance"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/miss_distance" />
 
-    <TextView
-        android:id="@+id/neo_hazardous"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Potentially hazardous"
-        android:textColor="@color/foreground"
-        android:textSize="@dimen/textSizeLarge"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/neo_orbiting_body" />
+            <TextView
+                android:id="@+id/orbiting_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/orbiting_body"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/neo_miss_distance" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.09245742" />
+            <TextView
+                android:id="@+id/neo_orbiting_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Orbiting body"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/orbiting_body" />
+
+            <TextView
+                android:id="@+id/neo_hazardous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Potentially hazardous"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/neo_orbiting_body" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.09245742" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

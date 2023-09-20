@@ -4,10 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -36,7 +38,11 @@ public class MainActivity extends AppCompatActivity {
         adapter = new MainItemAdapter(this, items);
         recycler = findViewById(R.id.main_recycler);
         recycler.setAdapter(adapter);
-        recycler.setLayoutManager(new LinearLayoutManager(this));
+        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            recycler.setLayoutManager(new LinearLayoutManager(this));
+        } else {
+            recycler.setLayoutManager(new GridLayoutManager(this, 2));
+        }
     }
 
     private void initializeItems() {

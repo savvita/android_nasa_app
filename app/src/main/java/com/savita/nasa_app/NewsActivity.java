@@ -37,6 +37,12 @@ public class NewsActivity extends AppCompatActivity {
         loadData();
     }
 
+    @Override
+    protected void onResume() {
+        loadData();
+        super.onResume();
+    }
+
     private void loadData() {
         spinner.setVisibility(View.VISIBLE);
         recycler.setVisibility(View.GONE);
