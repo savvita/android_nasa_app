@@ -9,4 +9,5 @@
     <dimen name="lastImageMaxHeight">300dp</dimen>
     <dimen name="textSizeTitle">20sp</dimen>
     <dimen name="textSizeLarge">16sp</dimen>
+    <dimen name="imageMaxHeight">250dp</dimen>
 </resources>
