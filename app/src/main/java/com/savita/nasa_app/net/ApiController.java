@@ -5,19 +5,13 @@ import android.util.Log;
 import com.savita.nasa_app.configs.AppConfig;
 import com.savita.nasa_app.configs.NasaApiConfig;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.function.Function;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -75,66 +69,6 @@ public class ApiController implements IApiController {
 
         return sb.toString();
     }
-//
-//    public static <T> List<T> getList(String baseUrl, HashMap<String, String> params, Function<JSONObject, T> deserializer) {
-//        HttpsURLConnection connection = null;
-//        List<T> results = new ArrayList<>();
-//        try {
-//            connection = getConnection(baseUrl, params);
-//            connection.setDoInput(true);
-//
-//            int code = connection.getResponseCode();
-//            Log.d(TAG, "get: " + code + "; message: " + connection.getResponseMessage());
-//
-//            if(code == HttpsURLConnection.HTTP_OK) {
-//                try (InputStream stream = connection.getInputStream()) {
-//                    String json = getStringFromStream(stream);
-//                    Log.d(TAG, "getList: " + json);
-//                    JSONArray jsonArr = new JSONArray(json);
-//                    for(int i = 0; i < jsonArr.length(); i++) {
-//                        JSONObject objJson = jsonArr.getJSONObject(i);
-//                        results.add(deserializer.apply(objJson));
-//                    }
-//                }
-//            }
-//        } catch (Exception ex) {
-//            Log.d(TAG, "get: ", ex);
-//        } finally {
-//            if(connection != null) {
-//                connection.disconnect();
-//            }
-//        }
-//
-//        return results;
-//    }
-//
-//    public static <T> T getSingle(String baseUrl, HashMap<String, String> params, Function<JSONObject, T> deserializer) {
-//        HttpsURLConnection connection = null;
-//        T result = null;
-//        try {
-//            connection = getConnection(baseUrl, params);
-//            connection.setDoInput(true);
-//
-//            int code = connection.getResponseCode();
-//            Log.d(TAG, "get: " + code + "; message: " + connection.getResponseMessage());
-//
-//            if(code == HttpsURLConnection.HTTP_OK) {
-//                try (InputStream stream = connection.getInputStream()) {
-//                    String json = getStringFromStream(stream);
-//                    result = deserializer.apply(new JSONObject(json));
-//                }
-//            }
-//        } catch (Exception ex) {
-//            Log.d(TAG, "get: ", ex);
-//        } finally {
-//            if(connection != null) {
-//                connection.disconnect();
-//            }
-//        }
-//
-//        return result;
-//    }
-
     private String getStringFromStream(InputStream stream) throws IOException {
         char[] buffer = new char[AppConfig.BUFFER_SIZE];
         StringBuilder out = new StringBuilder();

@@ -7,6 +7,6 @@
     <dimen name="cardBorderRadius">10dp</dimen>
     <dimen name="cardElevation">7dp</dimen>
     <dimen name="lastImageMaxHeight">300dp</dimen>
-    <dimen name="textSizeTitle">20dp</dimen>
-    <dimen name="textSizeLarge">16dp</dimen>
+    <dimen name="textSizeTitle">20sp</dimen>
+    <dimen name="textSizeLarge">16sp</dimen>
 </resources>

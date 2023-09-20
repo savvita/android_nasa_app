@@ -18,12 +18,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ApodActivity"
+            android:name=".NeoActivity"
             android:exported="false" />
         <activity
-            android:name=".ApodListActivity"
+            android:name=".NeoListActivity"
             android:exported="true"
-            android:label="@string/astronomy_picture_of_the_day">
+            android:label="@string/near_earth_object">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,8 +31,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ApodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ApodListActivity"
+            android:exported="false"
+            android:label="@string/astronomy_picture_of_the_day"></activity>
+        <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

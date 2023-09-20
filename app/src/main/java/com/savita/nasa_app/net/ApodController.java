@@ -41,10 +41,8 @@ public class ApodController {
                         apods.add(Apod.deserialize(jsonArr.getJSONObject(i)));
                     }
 
-//                    this.items.clear();
                     Collections.reverse(apods);
                     this.items.addAll(apods);
-//                    Collections.reverse(this.items);
                 } catch (Exception ex) {
                     Log.d(TAG, "get: ", ex);
                 }
@@ -53,21 +51,4 @@ public class ApodController {
 
         return apods;
     }
-//    public List<APOD> getList(HashMap<String, String> params) {
-//        return ApiController.getList(URL, null, json -> getApod(json));
-//    }
-//
-//    public APOD get() {
-//        return ApiController.getSingle(URL, null, json -> getApod(json));
-//    }
-//
-//    private APOD getApod(JSONObject obj) {
-//        APOD result = null;
-//        try {
-//            result = APOD.deserialize(obj);
-//        } catch (Exception ex) {
-//            Log.d(TAG, "get: deserialization error", ex);
-//        }
-//        return result;
-//    }
 }

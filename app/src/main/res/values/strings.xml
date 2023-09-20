@@ -7,4 +7,17 @@
     <string name="permission_denied">Permission denied</string>
     <string name="saving_failed">Saving failed</string>
     <string name="saved">Saved</string>
+    <string name="near_earth_object">Near Earth Object</string>
+    <string name="close_approach_date">"Close approach date : "</string>
+    <string name="hazardous_only">Hazardous only</string>
+    <string name="see_all">See all</string>
+    <string name="estimated_diameter">Estimated diameter</string>
+    <string name="max">Max</string>
+    <string name="min">Min</string>
+    <string name="relative_velocity">Relative velocity</string>
+    <string name="miss_distance">Miss distance</string>
+    <string name="orbiting_body">Orbiting body</string>
+    <string name="meters">meters</string>
+    <string name="km_s">km/s</string>
+    <string name="a_u">a.u.</string>
 </resources>

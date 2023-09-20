@@ -5,4 +5,7 @@
     <color name="bg_card">#222121</color>
     <color name="bg">#151515</color>
     <color name="foreground">#FFFFFF</color>
+    <color name="switchTrackTint">#737373</color>
+    <color name="switchInactiveThumbTint">#BDBDBD</color>
+    <color name="switchActiveThumbTint">#78E914</color>
 </resources>

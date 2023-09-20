@@ -18,9 +18,11 @@ import com.savita.nasa_app.configs.ApodConfig;
 import com.savita.nasa_app.configs.AppConfig;
 import com.savita.nasa_app.configs.NasaApiConfig;
 import com.savita.nasa_app.models.Apod;
+import com.savita.nasa_app.models.Neo;
 import com.savita.nasa_app.net.ApiController;
 import com.savita.nasa_app.net.ApodController;
 import com.savita.nasa_app.net.Loader;
+import com.savita.nasa_app.net.NeoController;
 import com.savita.nasa_app.sample_data.ApodSample;
 
 import java.text.DateFormat;
@@ -64,7 +66,7 @@ public class ApodListActivity extends AppCompatActivity {
         startDate = calendar.getTime();
 
         //TODO change this
-        controller = new ApodController(new ApodSample(getFilesDir()), NasaApiConfig.BASE_URL + "/planetary/apod");
+        controller = new ApodController(new ApodSample(getFilesDir()), NasaApiConfig.BASE_URL + NasaApiConfig.APOD_PATH);
 //        controller = new ApodController(new ApiController(), NasaApiConfig.BASE_URL + "/planetary/apod");
 
         items = new ArrayList<>();

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="switchStyle" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/switchActiveThumbTint</item>
+        <item name="colorSwitchThumbNormal">@color/switchInactiveThumbTint</item>
+        <item name="android:colorForeground">@android:color/darker_gray</item>
+        <item name="trackTint">@color/switchTrackTint</item>
+    </style>
+</resources>
