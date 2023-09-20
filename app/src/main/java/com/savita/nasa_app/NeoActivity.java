@@ -10,6 +10,8 @@ import android.os.Bundle;
 import com.savita.nasa_app.adapters.ApodPageAdapter;
 import com.savita.nasa_app.adapters.NeoPageAdapter;
 import com.savita.nasa_app.configs.AppConfig;
+import com.savita.nasa_app.configs.NeoConfig;
+import com.savita.nasa_app.net.NeoController;
 
 public class NeoActivity extends AppCompatActivity {
     private static final String TAG = "NeoActivity";
@@ -41,6 +43,9 @@ public class NeoActivity extends AppCompatActivity {
     }
 
     private void showDetails() {
-        // TODO implement
+        Intent intent = new Intent(this, NeoDetailsActivity.class);
+        intent.putExtra(NeoConfig.ID_KEY, NeoController.items.get(currentIndex).getId());
+        intent.putExtra(NeoConfig.NAME_KEY, NeoController.items.get(currentIndex).getName());
+        startActivity(intent);
     }
 }

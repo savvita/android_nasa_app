@@ -66,6 +66,7 @@ public class NeoListActivity extends AppCompatActivity {
         dateView.setText(formatter.format(new Date(System.currentTimeMillis())));
         dateView.setOnClickListener(view -> dialog.show());
 
+        //TODO change this
         controller = new NeoController(new NeoSample(getFilesDir()), NasaApiConfig.BASE_URL + NasaApiConfig.NEO_PATH);
 
         isHazardousOnly = findViewById(R.id.hazardous_only_switch);

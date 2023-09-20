@@ -9,6 +9,7 @@
     <string name="saved">Saved</string>
     <string name="near_earth_object">Near Earth Object</string>
     <string name="close_approach_date">"Close approach date : "</string>
+    <string name="close_approach_date_v2">"Close approach date"</string>
     <string name="hazardous_only">Hazardous only</string>
     <string name="see_all">See all</string>
     <string name="estimated_diameter">Estimated diameter</string>

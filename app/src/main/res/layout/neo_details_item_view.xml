@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/paddingStart"
+        android:background="@color/bg_card"
+        android:padding="@dimen/paddingBottom"
+        app:cardBackgroundColor="@color/bg_card"
+        app:cardCornerRadius="@dimen/cardBorderRadius"
+        app:cardElevation="@dimen/cardElevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/paddingBottom">
+
+            <TextView
+                android:id="@+id/neo_details_close_approach_date_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/close_approach_date_v2"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/neo_details_close_approach_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Close approach date"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintBaseline_toBaselineOf="@+id/neo_details_close_approach_date_txt"
+                app:layout_constraintStart_toEndOf="@+id/neo_details_close_approach_date_txt" />
+
+            <TextView
+                android:id="@+id/neo_details_relative_velocity_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/relative_velocity"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/neo_details_close_approach_date" />
+
+            <TextView
+                android:id="@+id/neo_details_velocity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Velocity"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintBaseline_toBaselineOf="@+id/neo_details_relative_velocity_txt"
+                app:layout_constraintStart_toEndOf="@+id/neo_details_relative_velocity_txt" />
+
+            <TextView
+                android:id="@+id/neo_details_miss_distance_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/miss_distance"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/neo_details_velocity" />
+
+            <TextView
+                android:id="@+id/neo_details_miss_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Miss distance"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintBaseline_toBaselineOf="@+id/neo_details_miss_distance_txt"
+                app:layout_constraintStart_toEndOf="@+id/neo_details_miss_distance_txt" />
+
+            <TextView
+                android:id="@+id/neo_details_orbiting_body_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/orbiting_body"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/neo_details_miss_distance" />
+
+            <TextView
+                android:id="@+id/neo_details_orbiting_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Orbiting body"
+                android:textColor="@color/foreground"
+                android:textSize="@dimen/textSizeLarge"
+                app:layout_constraintBaseline_toBaselineOf="@+id/neo_details_orbiting_body_txt"
+                app:layout_constraintStart_toEndOf="@+id/neo_details_orbiting_body_txt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
